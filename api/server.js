@@ -22,8 +22,13 @@ server.use(jsonServer.rewriter({
     '/api/*': '/$1',
     '/blog/:resource/:id/show': '/:resource/:id'
 }))
+
+// server.use(jsonServer.rewriter({
+//     '/api/*': '/$1'
+// }))
+
 server.use(router)
-server.listen(3000, () => {
+server.listen(3002, () => {
     console.log('JSON Server is running')
 })
 
